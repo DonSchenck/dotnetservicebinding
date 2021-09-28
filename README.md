@@ -1,8 +1,8 @@
-# csharpservicebinding
-> **Kubernetes Service Binding Library for C# Applications**
+# dotnetservicebinding
+> **Kubernetes Service Binding Library for .NET Applications**
 
 The [Service Binding Specification][spec] for Kubernetes standardizes exposing
-backing service secrets to applications.  This project provides a C# module
+backing service secrets to applications.  This project provides a .NET module
 to consume the bindings projected into the container.  The [Application
 Projection][application-projection] section of the spec describes how the
 bindings are projected into the application.  The primary mechanism of
