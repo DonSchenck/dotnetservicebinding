@@ -10,11 +10,18 @@ namespace KubeServiceBinding
 
         public Dictionary<string, string> GetBindings(string type)
         {
-            var bindingDirectory =
-                Environment.GetEnvironmentVariable("SERVICE_BINDING_ROOT");
-            _bindingsDictionary = new Dictionary<string, string>();
-            ProcessDirectoryTree (bindingDirectory, type);
-            return _bindingsDictionary;
+            try
+            {
+                var bindingDirectory =
+                    Environment.GetEnvironmentVariable("SERVICE_BINDING_ROOT");
+                _bindingsDictionary = new Dictionary<string, string>();
+                ProcessDirectoryTree (bindingDirectory, type);
+                return _bindingsDictionary;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         private static void ProcessDirectoryTree(string directory, string type)
@@ -23,7 +30,6 @@ namespace KubeServiceBinding
             // in the directory where the file named "type" exists
             // AND the contents of that file matches the type of binding
             // requested, e.g. "kafka".
-
             // For each file, use the filename
             // as the key and the contents as the value, and add this
             // key-value pair to a list of key-value pairs.

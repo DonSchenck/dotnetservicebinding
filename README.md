@@ -19,19 +19,19 @@ bindings to the cache server.
 
 The example given in the spec:
 
-$SERVICE_BINDING_ROOT
-├── account-database
-│   ├── type
-│   ├── provider
-│   ├── uri
-│   ├── username
-│   └── password
-└── transaction-event-stream
-    ├── type
-    ├── connection-count
-    ├── uri
-    ├── certificates
-    └── private-key
+$SERVICE_BINDING_ROOT  
+├── account-database  
+│   ├── type  
+│   ├── provider  
+│   ├── uri  
+│   ├── username  
+│   └── password  
+└── transaction-event-stream  
+    ├── type  
+    ├── connection-count  
+    ├── uri  
+    ├── certificates  
+    └── private-key  
 
 In the above example, there are two bindings under the `SERVICE_BINDING_ROOT`
 directory.  The `account-database` and `transaction-event-system` are the names
@@ -43,8 +43,8 @@ narrow down the type further.  This module use the `type` field and, optionally,
 `provider` field to look up the bindings.
 
 ## Installation
+Installation details can be found at [the associated nuget page](https://www.nuget.org/packages/KubeServiceBinding.DotnetServiceBinding/).  
 
 ## Usage
 
-[spec]: https://github.com/k8s-service-bindings/spec
-[application-projection]: https://github.com/k8s-service-bindings/spec#application-projection
+An example can be found at: https://github.com/donschenck/vac-seen-generator.git

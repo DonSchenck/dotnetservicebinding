@@ -1,7 +1,20 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-  </PropertyGroup>
+    <AssemblyVersion>0.1.1</AssemblyVersion>
+    <PackageId>KubeServiceBinding.DotnetServiceBinding</PackageId>
+    <Version>0.1.1</Version>
+    <Authors>Don Schenck</Authors>
+    <Company>Red Hat</Company>
+    <Title>Kubernetes Service Binding for .NET</Title>
+    <Description>
+      This client library enables .NET code to use Kubernetes Service Binding to bind to services, e.g. Red Hat OpenShift Streams for Apache Kafka.
+      The Github repo can be found here: https://github.com/donschenck/dotnetservicebinding
+    </Description>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>  
+    </PropertyGroup>
 
+    <ItemGroup>
+      <None Include="LICENSE" Pack="true" PackagePath=""/>
+    </ItemGroup>
 </Project>
